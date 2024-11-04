@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-P4-M09.5</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 95%; margin: auto; }
+        .dropdown { margin-bottom: 20px; }
+        .time-title, .level-title { font-size: 1.2em; font-weight: bold; }
+        .activity { margin-bottom: 30px; }
+        .banner { background-color: #4CAF50; color: white; padding: 10px; cursor: pointer; }
+        .title { font-weight: bold; }
+        .subtitle { font-style: italic; }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook-P4-M09.5</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="40">40 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_mision')">
+                <div class="title">📚 Actividad 0: Revisión de Misión ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Verificar disponibilidad de materiales para la misión.</div>
+            </div>
+            <div id="revision_mision" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Proyectar Diapositiva 1 y verificar que estén disponibles: Magic Boards, BBC Micro, Robots Programables y Manuales.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> No aplica</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('saludo_ritual')">
+                <div class="title">🎉 Actividad 1: Saludo y Ritual Gnius Club ⏰ Tiempo: 2.5 minutos</div>
+                <div class="subtitle">Dar la bienvenida y preparar el ambiente para la misión.</div>
+            </div>
+            <div id="saludo_ritual" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 2 "Gnius Club".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola Genios! 🌟 Hoy tenemos una misión muy especial donde aprenderemos a programar los movimientos de nuestro robot. ¿Están listos para esta aventura?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Proyectar Diapositiva 3 "¿Cómo están?" con poses para expresar el estado de ánimo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Antes de comenzar, quiero saber cómo están hoy. Si te sientes súper entusiasmado y listo para el reto, levanta las manos hacia el cielo en señal de victoria. Si necesitas un poco más de energía, cruza los brazos y pon cara de concentración. ¡Así sabré cómo está nuestro equipo de genios exploradores!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (0.5 minutos):</strong> Proyectar Diapositiva 4 y guiar a los estudiantes en el ritual "Gracias por Asistir".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Juntamos nuestras manos en agradecimiento por la oportunidad de aprender juntos hoy. ¡Gracias por estar aquí, Genios! Hoy va a ser un gran día de programación y exploración.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (0.5 minutos):</strong> Proyectar Diapositiva 5 "Objetivos de la Misión" y leer los objetivos en voz alta.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy tenemos dos grandes objetivos: 1. Aprender a programar movimientos básicos en nuestro robot. 2. Trabajar juntos en equipo para explorar nuevas rutas de organización. ¡Va a ser increíble!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Actividad 2 -->
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('brain_vitamin')">
+                <div class="title">💡 Actividad 2: Brain Vitamin ⏰ Tiempo: 3 minutos</div>
+                <div class="subtitle">Ejercicio de activación cerebral para preparar la mente.</div>
+            </div>
+            <div id="brain_vitamin" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 6 "Activación Cerebral".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios! Antes de sumergirnos en la programación, vamos a darle a nuestro cerebro una dosis de energía con gimnasia cerebral. ¡Prepárense para unos movimientos que conectarán su mente y cuerpo para pensar como verdaderos programadores!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Proyectar Diapositiva 7 con los pasos del ejercicio de cruce de la línea media.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Vamos a cruzar los brazos y las piernas en un ejercicio especial! Toca tu mano derecha con tu rodilla izquierda, luego al revés. Esto ayuda a tu cerebro a coordinarse mejor. ¡Hagámoslo juntos varias veces!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1.5 minutos):</strong> Proyectar Diapositiva 8 y guiar el ejercicio del "Ocho Dormido".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, dibuja un número 8 de lado en el aire con tu mano. Sigue el movimiento con tus ojos sin mover la cabeza. Este ejercicio ayuda a mejorar la concentración y el enfoque. ¡Vamos, sigamos la figura ocho unas cuantas veces!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Actividad 3 -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('challenge')">
+                <div class="title">🚀 Actividad 3: Challenge ⏰ Tiempo: 33 minutos</div>
+                <div class="subtitle">Introducir el reto y preparar a los genios para la misión de programación.</div>
+            </div>
+            <div id="challenge" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Proyectar Diapositiva 9 "Portada del Challenge".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Bienvenidos, ingenieros espaciales! Hoy vamos a ayudar a Boty, nuestro robot, a organizar productos en un almacén. ¿Listos para una misión de programación?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Guiar a los estudiantes para que reúnan los materiales necesarios.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Antes de empezar, asegúrense de tener todo lo necesario: su Micro, el robot y sus Magic Boards. ¡Recojan los materiales y prepárense para la misión!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (3 minutos):</strong> Proyectar Diapositiva 10 "Recogiendo materiales".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Tienen 3 minutos para recoger todo y prepararse. ¡Asegúrense de que su robot esté listo para organizar el almacén!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (3 minutos):</strong> Proyectar Diapositiva 11 "Challenges".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora vamos a hablar de los tres retos que tenemos para esta misión de organización en el almacén. Cada uno de estos niveles representa un desafío especial para que Boty, nuestro robot, pueda organizar productos en pasillos diferentes. Escuchen con atención y decidan cuál les gustaría intentar. <br><br>
+                        
+                        **Rookie** – “Organización Básica en el Pasillo E” 📦<br>
+                        Historia: Boty ha sido asignado a un pasillo llamado "Pasillo E", en honor a la forma que debe seguir. Este pasillo contiene las estanterías de productos más básicos, y Boty necesita trazar una ruta en forma de "E" para colocar correctamente las cajas en cada nivel. <br>
+                        Objetivo: Programar a Boty para que se mueva en forma de letra "E", siguiendo un recorrido específico en tres líneas horizontales con giros precisos para conectar cada línea de la "E" de manera correcta.<br><br>
+                        
+                        **Master** – “Organización Compleja en el Pasillo M” 📚<br>
+                        Historia: Tras completar la primera tarea, Boty ahora es enviado al “Pasillo M,” donde se guardan productos de varias categorías. Este recorrido en forma de "M" permite que Boty se desplace de un lado al otro del pasillo. <br>
+                        Objetivo: Programar a Boty para seguir un recorrido en forma de "M", desplazándose de lado a lado en el pasillo.<br><br>
+                        
+                        **Hacker** – “Desafío Completo en el Pasillo Z” 🏷️<br>
+                        Historia: Finalmente, Boty ha sido seleccionado para el "Pasillo Z," la sección de productos más variada y compleja. Aquí, Boty necesita realizar un recorrido en forma de "Z" de ida y regreso. <br>
+                        Objetivo: Programar a Boty para realizar el recorrido en forma de "Z", donde deberá realizar giros exactos y avanzar con precisión en cada línea del pasillo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (20 minutos):</strong> Proyectar Diapositiva 12 "Challenge en proceso".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Es momento de poner manos a la obra. Tienen 20 minutos para programar a Boty según el reto que eligieron. ¡La precisión es clave! ¡A trabajar!</td>
+                    </tr>
+                    <tr id="step-6">
+                        <td><strong>PASO 6 (5 minutos):</strong> Supervisar las pruebas de los equipos y ayudar con los ajustes según el nivel elegido.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Es momento de probar su código. Verifiquen que los movimientos son precisos. ¡Si es necesario, ajusten los giros y la velocidad para completar su misión!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 7 (3 minutos):</strong> Proyectar Diapositiva 13 "Reflexión del Challenge".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Excelente trabajo, genios! Reflexionemos: ¿Qué ajustes fueron clave para que su robot completara el reto? ¿Cómo fue su experiencia en el nivel que eligieron?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 8 (0.5 minutos):</strong> Proyectar Diapositiva 14 "Revisión de Misión".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hemos completado nuestra misión de hoy. ¡Vamos a revisar lo que logramos! ¡Gran trabajo, Genios!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Actividad 4 -->
+        <div id="activity-4" class="activity">
+            <div class="banner" onclick="toggleContent('team_gnius')">
+                <div class="title">🤝 Actividad 4: Team Gnius ⏰ Tiempo: 5 minutos</div>
+                <div class="subtitle">Formar equipos y asignar roles para la misión en el almacén.</div>
+            </div>
+            <div id="team_gnius" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 15 "Portada Team Gnius".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, bienvenidos al equipo de logística del almacén! Hoy, cada equipo será responsable de organizar productos en un pasillo específico del almacén (E, M o Z). Utilizaremos Team CANVAS para organizarnos, definir roles y asegurar el éxito de nuestra misión. ¡Es hora de prepararse para el reto!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Guiar a los estudiantes en la formación de equipos y asignación de roles.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Cada equipo se organizará como un grupo de ingenieros de almacén. En un minuto, formen sus equipos y asignen roles clave: Ingeniero Jefe (Líder), Programador de Movimientos (Programador) y Control de Calidad (Tester). ¡Recuerden que cada rol es esencial para completar su misión en el pasillo asignado!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Explicar el uso de Team CANVAS y cómo ayudará a la planificación y organización.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Para que cada equipo sea eficiente en el almacén, usaremos Team CANVAS, una herramienta visual para organizar sus roles y objetivos. En su Team CANVAS, definirán qué hará cada persona, los valores que guiarán su equipo, y el objetivo de organización en su pasillo asignado. ¡Piensen como verdaderos ingenieros de almacén!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (2 minutos):</strong> Proyectar Diapositiva 16 "Think-Pair-Share" y guiar la discusión en equipo usando Team CANVAS.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Tómense 2 minutos para discutir en sus equipos cómo cada rol contribuirá al objetivo en el pasillo asignado (E, M o Z). Piensen en cómo se van a organizar para que Boty cumpla con su ruta. ¡Recuerden que cada rol es importante y el trabajo en equipo hace que todo funcione!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (1 minuto):</strong> Proyectar Diapositiva 17 "Compartir Reflexiones" y pedir a los equipos que compartan sus ideas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que tienen su Team CANVAS, compartan con su equipo sus ideas sobre cómo podemos organizar mejor a Boty para completar su misión en su pasillo específico. ¡Recuerden, en el almacén el trabajo en equipo lo es todo! ¿Qué ideas tienen para mejorar?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Actividad 5 -->
+        <div id="activity-5" class="activity">
+            <div class="banner" onclick="toggleContent('honor_dojo')">
+                <div class="title">🏅 Actividad 5: Honor de Dojo ⏰ Tiempo: 5 minutos</div>
+                <div class="subtitle">Reflexionar sobre el esfuerzo colectivo y organizar el espacio de trabajo.</div>
+            </div>
+            <div id="honor_dojo" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (3 minutos):</strong> Proyectar Diapositiva 18 "Revisión de Objetivos" para guiar la reflexión final.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, gran trabajo hoy! Vamos a revisar los objetivos que nos planteamos al principio. ¿Logramos programar a Boty para moverse con precisión y completar la ruta en su pasillo? ¿Cumplimos con los retos en los niveles E, M, y Z? ¡Vamos a reflexionar juntos sobre lo que hemos aprendido!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Guiar la reflexión sobre el esfuerzo colectivo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy no solo logramos que Boty completara su ruta en el almacén, ¡logramos trabajar como un equipo! Gracias a la comunicación, organización y roles bien definidos, cada equipo alcanzó su objetivo en el pasillo asignado. ¡Felicidades a todos por su esfuerzo y colaboración!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (0.5 minutos):</strong> Proyectar Diapositiva 19 "Reflexión Final".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Antes de terminar, pensemos en una cosa que haríamos igual y otra que mejoraríamos la próxima vez. ¿Qué creen que fue clave para nuestro éxito y qué podríamos ajustar en la siguiente misión?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1 minuto):</strong> Proyectar Diapositiva 20 "Honor de Dojo" y guiar a los estudiantes para que recojan y organicen los materiales usados durante la clase.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, como parte del Honor de Dojo, vamos a dejar nuestro espacio de trabajo limpio y organizado, tal como lo encontramos al comenzar. ¡Un buen ingeniero siempre respeta su área de trabajo!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div> <!-- Cierre del container -->
+
+    <!-- Scripts adicionales si es necesario -->
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Ocultar la Actividad 2 si el tiempo es menor a 50 minutos
+            document.getElementById("activity-2").style.display = time === "50" ? "block" : "none";
+
+            // Ocultar el Paso 6 de la Actividad 3 si el tiempo es de 40 minutos
+            var step6 = document.getElementById("step-6");
+            if (time === "40") {
+                step6.style.display = "none";
+            } else {
+                step6.style.display = "table-row";
+            }
+        }
+
+        // Inicializar el contenido según las selecciones por defecto
+        updateContent();
+    </script>
+
+</body>
+</html>
